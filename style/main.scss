@@ -1,5 +1,6 @@
 @import "_fonts.scss";
 @import "_variables.scss";
+@import "_breakpoints.scss";
 
 *,
 ::after,
@@ -27,48 +28,122 @@ section {
   margin: 6em auto 6em;
 }
 
+// Navbar
 .nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  padding: 0 0 30px 0px;
   position: fixed;
   background-color: $nav;
   top: 0;
   left: 0;
   width: 100%;
+}
 
-  .logo-link {
-    margin: 0 0 0 100px;
-    .logo-image {
-      width: 139px;
-      height: 35px;
-      background-image: url("../images/logo.png");
-    }
+.burger-menu {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  top: -35px;
+  left: 87%;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+
+  .bars {
+    width: 23px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: gray;
+    position: relative;
+    top: 50%;
+    margin: auto;
   }
 
-  .nav-list {
-    list-style-type: none;
-    display: flex;
-    margin: 0 50px 0 0;
-
-    .nav-item {
-      margin: 0 0 0 50px;
-
-      .nav-item-link {
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 1.5;
-      }
-
-      .nav-item-link:hover {
-        color: $nav-item;
-      }
-    }
+  .bars::after,
+  .bars::before {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: gray;
+    margin: auto;
   }
+
+  .bars::before {
+    top: -7px;
+  }
+
+  .bars::after {
+    top: 7px;
+  }
+}
+
+.logo-link {
+  margin: 20px 0 0 90px;
+}
+
+.logo-image {
+  width: 139px;
+  height: 35px;
+  background-image: url("../images/logo.png");
+}
+
+.nav-list {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-item {
+  margin: 25px 0 0 40px;
+}
+
+.nav-item-link {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.nav-item-link:hover {
+  color: $nav-item;
 }
 
 .add-shadow {
   box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+// desktop version
+@include desktop {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+  .logo-link {
+    margin: 0 0 0 100px;
+  }
+
+  .nav-list {
+    display: flex;
+    margin: 0 50px 0 0;
+    width: auto;
+    padding: 0;
+  }
+
+  .nav-item {
+    margin: 0 0 0 50px;
+  }
 }

@@ -6,3 +6,20 @@ window.addEventListener('scroll',(e)=>{
       nav.classList.remove("add-shadow");
     }
   });
+
+
+  toggleBurger = () => {
+
+
+
+    let navMenu = document.querySelector('.nav-list');
+
+    console.log(navMenu.style.display);
+    if (navMenu.style.display === 'none') {
+        navMenu.style.display = 'block';
+        console.log("first");
+    } else {
+        navMenu.style.display = 'none';
+        console.log("second");
+    }
+  }

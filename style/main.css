@@ -30,13 +30,15 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: auto;
+  padding: 0 0 30px 0px;
   position: fixed;
   background-color: #fff;
   top: 0;
@@ -44,41 +46,116 @@ section {
   width: 100%;
 }
 
-.nav .logo-link {
-  margin: 0 0 0 100px;
+.burger-menu {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  top: -35px;
+  left: 87%;
+  z-index: 2;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
 }
 
-.nav .logo-link .logo-image {
+.burger-menu .bars {
+  width: 23px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: gray;
+  position: relative;
+  top: 50%;
+  margin: auto;
+}
+
+.burger-menu .bars::after,
+.burger-menu .bars::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 2px;
+  border-radius: 3px;
+  background-color: gray;
+  margin: auto;
+}
+
+.burger-menu .bars::before {
+  top: -7px;
+}
+
+.burger-menu .bars::after {
+  top: 7px;
+}
+
+.logo-link {
+  margin: 20px 0 0 90px;
+}
+
+.logo-image {
   width: 139px;
   height: 35px;
   background-image: url("../images/logo.png");
 }
 
-.nav .nav-list {
+.nav-list {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 50px 0 0;
+  display: none;
 }
 
-.nav .nav-list .nav-item {
-  margin: 0 0 0 50px;
+.nav-item {
+  margin: 25px 0 0 40px;
 }
 
-.nav .nav-list .nav-item .nav-item-link {
+.nav-item-link {
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
 }
 
-.nav .nav-list .nav-item .nav-item-link:hover {
+.nav-item-link:hover {
   color: #0056b3;
 }
 
 .add-shadow {
   -webkit-box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
           box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+}
+
+@media (min-width: 990px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    padding: 0;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .logo-link {
+    margin: 0 0 0 100px;
+  }
+  .nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 50px 0 0;
+    width: auto;
+    padding: 0;
+  }
+  .nav-item {
+    margin: 0 0 0 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
