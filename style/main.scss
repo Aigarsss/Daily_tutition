@@ -20,10 +20,6 @@ a {
   color: $black;
 }
 
-.container {
-  width: 80%;
-}
-
 section {
   width: 85%;
   margin: 6em auto 6em;
@@ -74,6 +70,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 20;
 }
 
 .burger-menu {
@@ -148,7 +145,7 @@ section {
 }
 
 .add-shadow {
-  box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  box-shadow: $box-shadow;
 }
 
 // Navbar desktop version
@@ -257,6 +254,12 @@ section {
   }
 }
 
+// Experience section
+
+.grid {
+  margin: auto auto 2em;
+}
+
 .grid-item {
   width: 180px;
   height: 100px;
@@ -266,14 +269,244 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   opacity: 0.5;
+  z-index: -1;
 }
 
 .grid-item:hover {
   transform: scale(1.1);
   opacity: 1;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2),
-    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1),
-    0 16px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: $box-shadow;
   transition: 0.4s;
+}
+
+.experience-block {
+  background-color: #e029290a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.experience-years {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.5em;
+  width: 50px;
+  position: relative;
+  margin: 1.5em auto 5em;
+}
+
+.experience-years::before {
+  content: "";
+  background-image: url("../images/client-info-bg.png");
+  width: 140px;
+  height: 170px;
+  top: -15px;
+  left: -70px;
+  position: absolute;
+}
+
+.experience-years::after {
+  content: "10";
+  line-height: 1.2;
+  color: $primary-color2;
+  font-size: 3em;
+  position: absolute;
+  left: -100px;
+  top: -20px;
+}
+
+.experience-number {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-link {
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 1rem;
+  position: relative;
+
+  &:hover {
+    text-decoration: underline;
+    color: $primary-color2;
+  }
+
+  &::before {
+    content: "📞";
+    font-size: 2em;
+    position: absolute;
+    left: -70px;
+  }
+}
+
+.contact-number {
+  margin: auto auto 3em;
+}
+
+//Services section
+
+.services-section {
+  text-align: center;
+
+  h1,
+  h2 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: auto auto 2rem;
+  }
+
+  > p {
+    color: $text-gray;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: auto auto 2rem;
+  }
+}
+
+.skill-card-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-card {
+  background-color: rgba(224, 224, 224, 0.158);
+  margin: 3em auto 3em;
+  width: 70%;
+
+  &:hover {
+    box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+    transition: 0.6s;
+  }
+}
+
+.skill-img {
+  margin: 3rem auto 3rem;
+}
+
+.skill-title {
+  margin: auto auto 1.2rem;
+}
+
+.skill-description {
+  font-weight: 500;
+  width: 80%;
+  margin: auto auto 3rem;
+}
+
+// Recently done work
+
+.recent-section {
+  h1 {
+    text-transform: uppercase;
+    width: 100px;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: auto 0 3rem;
+  }
+}
+
+.project-filters {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.project-filter {
+  margin: auto 3rem 1rem auto;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-grid-item {
+  margin: 1em;
+
+  img {
+    &:hover {
+      cursor: pointer;
+      filter: brightness(110%);
+      box-shadow: $box-shadow;
+      transition: 0.6s;
+    }
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin: 1rem auto 0.2rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: $text-gray;
+  }
+}
+
+// What clients say about me
+
+.clients-section {
+  width: 80%;
+  > h1,
+  > p {
+    text-align: center;
+  }
+
+  > h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+
+    margin: auto auto 1rem;
+    line-height: 1.1;
+  }
+  > p {
+    color: $text-gray;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: auto auto 2rem;
+  }
+}
+
+.carrusel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carrusel-card {
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 3rem;
+  border-radius: 5px;
+  color: white;
+
+  img {
+    border-radius: 5px;
+    width: 70%;
+    margin: 2rem auto;
+  }
+}
+
+.carrusel-title {
+  text-transform: uppercase;
+  margin: 2rem auto 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.carrusel-description {
+  margin: auto auto 2rem 1rem;
+  line-height: 1.7;
 }

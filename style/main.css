@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 *,
 ::after,
@@ -16,10 +17,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-}
-
-.container {
-  width: 80%;
 }
 
 section {
@@ -80,6 +77,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 20;
 }
 
 .burger-menu {
@@ -154,8 +152,8 @@ section {
 }
 
 .add-shadow {
-  -webkit-box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
-          box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+  -webkit-box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+          box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
 }
 
 @media (min-width: 990px) {
@@ -278,6 +276,10 @@ section {
   margin: auto 0 4em;
 }
 
+.grid {
+  margin: auto auto 2em;
+}
+
 .grid-item {
   width: 180px;
   height: 100px;
@@ -293,16 +295,281 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   opacity: 0.5;
+  z-index: -1;
 }
 
 .grid-item:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   opacity: 1;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25), 0 2px 2px rgba(0, 0, 0, 0.2), 0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+          box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.experience-block {
+  background-color: #e029290a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.experience-years {
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: 1.5em;
+  width: 50px;
+  position: relative;
+  margin: 1.5em auto 5em;
+}
+
+.experience-years::before {
+  content: "";
+  background-image: url("../images/client-info-bg.png");
+  width: 140px;
+  height: 170px;
+  top: -15px;
+  left: -70px;
+  position: absolute;
+}
+
+.experience-years::after {
+  content: "10";
+  line-height: 1.2;
+  color: #854fee;
+  font-size: 3em;
+  position: absolute;
+  left: -100px;
+  top: -20px;
+}
+
+.experience-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-link {
+  text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #4458dc;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  color: #854fee;
+}
+
+.contact-link::before {
+  content: "📞";
+  font-size: 2em;
+  position: absolute;
+  left: -70px;
+}
+
+.contact-number {
+  margin: auto auto 3em;
+}
+
+.services-section {
+  text-align: center;
+}
+
+.services-section h1,
+.services-section h2 {
+  text-transform: uppercase;
+}
+
+.services-section h1 {
+  font-size: 2rem;
+  margin: auto auto 2rem;
+}
+
+.services-section > p {
+  color: #777777;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: auto auto 2rem;
+}
+
+.skill-card-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.skill-card {
+  background-color: rgba(224, 224, 224, 0.158);
+  margin: 3em auto 3em;
+  width: 70%;
+}
+
+.skill-card:hover {
+  -webkit-box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+          box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.skill-img {
+  margin: 3rem auto 3rem;
+}
+
+.skill-title {
+  margin: auto auto 1.2rem;
+}
+
+.skill-description {
+  font-weight: 500;
+  width: 80%;
+  margin: auto auto 3rem;
+}
+
+.recent-section h1 {
+  text-transform: uppercase;
+  width: 100px;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: auto 0 3rem;
+}
+
+.project-filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-filter {
+  margin: auto 3rem 1rem auto;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.project-grid-item {
+  margin: 1em;
+}
+
+.project-grid-item img:hover {
+  cursor: pointer;
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+          box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.project-grid-item h3 {
+  text-transform: uppercase;
+  margin: 1rem auto 0.2rem;
+  font-size: 1.5rem;
+}
+
+.project-grid-item p {
+  color: #777777;
+}
+
+.clients-section {
+  width: 80%;
+}
+
+.clients-section > h1,
+.clients-section > p {
+  text-align: center;
+}
+
+.clients-section > h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  margin: auto auto 1rem;
+  line-height: 1.1;
+}
+
+.clients-section > p {
+  color: #777777;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: auto auto 2rem;
+}
+
+.carrusel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carrusel-card {
+  background-color: #4458dc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto auto 3rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.carrusel-card img {
+  border-radius: 5px;
+  width: 70%;
+  margin: 2rem auto;
+}
+
+.carrusel-title {
+  text-transform: uppercase;
+  margin: 2rem auto 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+.carrusel-description {
+  margin: auto auto 2rem 1rem;
+  line-height: 1.7;
 }
 /*# sourceMappingURL=main.css.map */
