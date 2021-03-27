@@ -8,11 +8,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: roboto;
 }
 
 body {
-  background-color: $nav;
+  background-color: rgb(243, 243, 243);
+  font-family: roboto;
 }
 
 a {
@@ -483,30 +483,171 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  height: 500px;
 }
 
 .carrusel-card {
-  background-color: $primary-color;
+  background-color: white;
+  width: 85%;
+  height: 500px;
   display: flex;
   flex-direction: column;
   margin: auto auto 3rem;
   border-radius: 5px;
-  color: white;
+  color: $black;
+  position: absolute;
 
   img {
     border-radius: 5px;
-    width: 70%;
+    width: 250px;
     margin: 2rem auto;
   }
 }
 
 .carrusel-title {
   text-transform: uppercase;
-  margin: 2rem auto 0.5rem 1rem;
+  margin: 2rem auto 0 1rem;
   font-size: 1.2rem;
 }
 
 .carrusel-description {
-  margin: auto auto 2rem 1rem;
+  margin: 0.5rem auto 2rem 1rem;
   line-height: 1.7;
+  color: $text-gray;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  background-color: $text-gray;
+  width: 15px;
+  height: 15px;
+  margin: 20px 10px;
+  border-radius: 50%;
+}
+
+.dot--active {
+  background-color: $primary-color;
+}
+
+// update section
+
+.updates-section {
+  background-image: url("../images/subscribe-bg.png");
+  color: white;
+  text-align: center;
+  margin: auto auto 8rem;
+
+  > h1 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    margin: auto auto 2rem;
+    padding: 6em 0 0 0;
+  }
+
+  > p {
+    width: 80%;
+    margin: auto;
+    padding: 0 0 2.5em 0;
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe-email {
+  width: 80%;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: auto auto 1em;
+
+  &::placeholder {
+    color: white;
+  }
+}
+
+.subscribe-button {
+  width: 50%;
+  max-width: 200px;
+  margin: auto auto 5em;
+  outline: none;
+  border: 1px solid $primary-color;
+  padding: 15px 0;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+// footer
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("../images/footer-bg.png");
+
+  p {
+    text-align: center;
+  }
+}
+
+.footer-logo-link {
+  margin: auto;
+}
+
+.follow-me {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 1em auto 1.5em;
+}
+
+.social {
+  margin-bottom: 2rem;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  width: 80%;
+  margin: auto;
+}
+
+.social-list-item {
+  i {
+    font-size: 1.2em;
+    opacity: 50%;
+
+    &:hover {
+      opacity: 100%;
+      color: $primary-color;
+      transition: 0.2s;
+    }
+  }
+}
+
+.copyright-info {
+  color: $text-gray;
+  margin: auto auto 8rem;
+
+  a {
+    color: $primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

@@ -7,11 +7,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: roboto;
 }
 
 body {
-  background-color: #fff;
+  background-color: #f3f3f3;
+  font-family: roboto;
 }
 
 a {
@@ -540,10 +540,14 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  height: 500px;
 }
 
 .carrusel-card {
-  background-color: #4458dc;
+  background-color: white;
+  width: 85%;
+  height: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,23 +557,189 @@ section {
           flex-direction: column;
   margin: auto auto 3rem;
   border-radius: 5px;
-  color: white;
+  color: black;
+  position: absolute;
 }
 
 .carrusel-card img {
   border-radius: 5px;
-  width: 70%;
+  width: 250px;
   margin: 2rem auto;
 }
 
 .carrusel-title {
   text-transform: uppercase;
-  margin: 2rem auto 0.5rem 1rem;
+  margin: 2rem auto 0 1rem;
   font-size: 1.2rem;
 }
 
 .carrusel-description {
-  margin: auto auto 2rem 1rem;
+  margin: 0.5rem auto 2rem 1rem;
   line-height: 1.7;
+  color: #777777;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.dots-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dot {
+  background-color: #777777;
+  width: 15px;
+  height: 15px;
+  margin: 20px 10px;
+  border-radius: 50%;
+}
+
+.dot--active {
+  background-color: #4458dc;
+}
+
+.updates-section {
+  background-image: url("../images/subscribe-bg.png");
+  color: white;
+  text-align: center;
+  margin: auto auto 8rem;
+}
+
+.updates-section > h1 {
+  text-transform: uppercase;
+  font-size: 1.8em;
+  margin: auto auto 2rem;
+  padding: 6em 0 0 0;
+}
+
+.updates-section > p {
+  width: 80%;
+  margin: auto;
+  padding: 0 0 2.5em 0;
+}
+
+.subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.subscribe-email {
+  width: 80%;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1.2em;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: auto auto 1em;
+}
+
+.subscribe-email::-webkit-input-placeholder {
+  color: white;
+}
+
+.subscribe-email:-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe-email::-ms-input-placeholder {
+  color: white;
+}
+
+.subscribe-email::placeholder {
+  color: white;
+}
+
+.subscribe-button {
+  width: 50%;
+  max-width: 200px;
+  margin: auto auto 5em;
+  outline: none;
+  border: 1px solid #4458dc;
+  padding: 15px 0;
+  border-radius: 5px;
+  font-size: 1.2em;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../images/footer-bg.png");
+}
+
+footer p {
+  text-align: center;
+}
+
+.footer-logo-link {
+  margin: auto;
+}
+
+.follow-me {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin: 1em auto 1.5em;
+}
+
+.social {
+  margin-bottom: 2rem;
+}
+
+.social-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style-type: none;
+  width: 80%;
+  margin: auto;
+}
+
+.social-list-item i {
+  font-size: 1.2em;
+  opacity: 50%;
+}
+
+.social-list-item i:hover {
+  opacity: 100%;
+  color: #4458dc;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.copyright-info {
+  color: #777777;
+  margin: auto auto 8rem;
+}
+
+.copyright-info a {
+  color: #4458dc;
+}
+
+.copyright-info a:hover {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=main.css.map */
