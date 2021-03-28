@@ -178,6 +178,7 @@ section {
   }
 }
 
+// cta section
 .cta-section {
   margin: 14em auto auto;
   color: $text;
@@ -219,6 +220,20 @@ section {
   margin: 7em auto 0;
 }
 
+// CTA desktop
+
+@include desktop {
+  .cta-section {
+    flex-direction: row;
+  }
+
+  .introduction-image {
+    width: 50%;
+    margin: 0 auto 0;
+  }
+}
+
+// about us section
 .about-us-section {
   display: flex;
   flex-direction: column;
@@ -254,10 +269,26 @@ section {
   }
 }
 
+// about us desktop
+
+@include desktop {
+  .about-us-section {
+    flex-direction: row;
+  }
+
+  .about-us-image {
+    width: 50%;
+    margin: 7em auto 2em;
+  }
+}
+
 // Experience section
 
 .grid {
   margin: auto auto 2em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
 }
 
 .grid-item {
@@ -271,7 +302,7 @@ section {
   align-items: center;
   cursor: pointer;
   opacity: 0.5;
-  z-index: -1;
+  z-index: 0;
 }
 
 .grid-item:hover {
@@ -279,6 +310,7 @@ section {
   opacity: 1;
   box-shadow: $box-shadow;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .experience-block {
@@ -349,6 +381,31 @@ section {
   margin: auto auto 3em;
 }
 
+// expeirence desktop
+@include desktop {
+  .experience-section {
+    display: flex;
+  }
+
+  .grid {
+    margin: 0;
+    width: 600px;
+  }
+
+  .experience-block {
+    width: 30%;
+    margin: auto;
+  }
+
+  .experience-years::before {
+    width: 170px;
+    height: 170px;
+    top: 0;
+    left: -220px;
+    position: absolute;
+  }
+}
+
 //Services section
 
 .services-section {
@@ -402,6 +459,28 @@ section {
   margin: auto auto 3rem;
 }
 
+// services section desktop
+
+@include desktop {
+  .services-section {
+    > p {
+      width: 70%;
+    }
+  }
+
+  .skill-card-block {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+  }
+
+  .skill-card {
+    margin: 3em 1em 3em;
+    width: 40%;
+  }
+}
+
 // Recently done work
 
 .recent-section {
@@ -452,6 +531,36 @@ section {
 
   p {
     color: $text-gray;
+  }
+}
+
+// recently done desktop
+
+@include desktop {
+  .recent-section {
+    h1 {
+      width: 700px;
+      margin: auto auto rem 3rem;
+    }
+  }
+
+  .project-filters {
+    margin: auto auto 2rem auto;
+  }
+
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .project-grid-item {
+    width: 30%;
+    margin: auto;
+
+    img {
+      width: 90%;
+    }
   }
 }
 
@@ -537,6 +646,46 @@ section {
   background-color: $primary-color;
 }
 
+// what client say desktop
+
+@include desktop {
+  .clients-section {
+    > p {
+      width: 70%;
+    }
+  }
+
+  .carrusel {
+    height: 200px;
+  }
+
+  .carrusel-card {
+    width: 550px;
+    height: 150px;
+    flex-direction: row;
+    margin: auto;
+
+    img {
+      border-radius: 5px;
+      display: block;
+      max-width: 230px;
+      max-height: 95px;
+      width: auto;
+      height: auto;
+      margin: 2rem;
+    }
+  }
+
+  .carrusel-card-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carrusel-description {
+    width: 95%;
+  }
+}
+
 // update section
 
 .updates-section {
@@ -588,6 +737,31 @@ section {
   padding: 15px 0;
   border-radius: 5px;
   font-size: 1.2em;
+}
+
+// update setion dekstop
+
+@include desktop {
+  .updates-section {
+    padding: 0 0 8rem 0;
+    max-width: 1100px;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+  }
+
+  .subscribe-email {
+    width: 80%;
+    margin: auto;
+  }
+
+  .subscribe-button {
+    width: 15%;
+    margin: auto;
+  }
 }
 
 // footer
@@ -649,5 +823,13 @@ footer {
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+//footer desktop
+
+@include desktop {
+  .social-list {
+    width: 40%;
   }
 }

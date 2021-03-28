@@ -238,6 +238,19 @@ section {
   margin: 7em auto 0;
 }
 
+@media (min-width: 990px) {
+  .cta-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .introduction-image {
+    width: 50%;
+    margin: 0 auto 0;
+  }
+}
+
 .about-us-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,8 +289,27 @@ section {
   margin: auto 0 4em;
 }
 
+@media (min-width: 990px) {
+  .about-us-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about-us-image {
+    width: 50%;
+    margin: 7em auto 2em;
+  }
+}
+
 .grid {
   margin: auto auto 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
 }
 
 .grid-item {
@@ -297,7 +329,7 @@ section {
           align-items: center;
   cursor: pointer;
   opacity: 0.5;
-  z-index: -1;
+  z-index: 0;
 }
 
 .grid-item:hover {
@@ -308,6 +340,7 @@ section {
           box-shadow: 11px 10px 60px -10px rgba(0, 0, 0, 0.62);
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .experience-block {
@@ -390,6 +423,29 @@ section {
   margin: auto auto 3em;
 }
 
+@media (min-width: 990px) {
+  .experience-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .grid {
+    margin: 0;
+    width: 600px;
+  }
+  .experience-block {
+    width: 30%;
+    margin: auto;
+  }
+  .experience-years::before {
+    width: 170px;
+    height: 170px;
+    top: 0;
+    left: -220px;
+    position: absolute;
+  }
+}
+
 .services-section {
   text-align: center;
 }
@@ -448,6 +504,27 @@ section {
   margin: auto auto 3rem;
 }
 
+@media (min-width: 990px) {
+  .services-section > p {
+    width: 70%;
+  }
+  .skill-card-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 80%;
+    margin: auto;
+  }
+  .skill-card {
+    margin: 3em 1em 3em;
+    width: 40%;
+  }
+}
+
 .recent-section h1 {
   text-transform: uppercase;
   width: 100px;
@@ -504,6 +581,33 @@ section {
 
 .project-grid-item p {
   color: #777777;
+}
+
+@media (min-width: 990px) {
+  .recent-section h1 {
+    width: 700px;
+    margin: auto auto rem 3rem;
+  }
+  .project-filters {
+    margin: auto auto 2rem auto;
+  }
+  .project-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project-grid-item {
+    width: 30%;
+    margin: auto;
+  }
+  .project-grid-item img {
+    width: 90%;
+  }
 }
 
 .clients-section {
@@ -605,6 +709,45 @@ section {
   background-color: #4458dc;
 }
 
+@media (min-width: 990px) {
+  .clients-section > p {
+    width: 70%;
+  }
+  .carrusel {
+    height: 200px;
+  }
+  .carrusel-card {
+    width: 550px;
+    height: 150px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: auto;
+  }
+  .carrusel-card img {
+    border-radius: 5px;
+    display: block;
+    max-width: 230px;
+    max-height: 95px;
+    width: auto;
+    height: auto;
+    margin: 2rem;
+  }
+  .carrusel-card-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .carrusel-description {
+    width: 95%;
+  }
+}
+
 .updates-section {
   background-image: url("../images/subscribe-bg.png");
   color: white;
@@ -671,6 +814,29 @@ section {
   padding: 15px 0;
   border-radius: 5px;
   font-size: 1.2em;
+}
+
+@media (min-width: 990px) {
+  .updates-section {
+    padding: 0 0 8rem 0;
+    max-width: 1100px;
+  }
+  .subscribe-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 70%;
+    margin: auto;
+  }
+  .subscribe-email {
+    width: 80%;
+    margin: auto;
+  }
+  .subscribe-button {
+    width: 15%;
+    margin: auto;
+  }
 }
 
 footer {
@@ -741,5 +907,11 @@ footer p {
 
 .copyright-info a:hover {
   text-decoration: underline;
+}
+
+@media (min-width: 990px) {
+  .social-list {
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
