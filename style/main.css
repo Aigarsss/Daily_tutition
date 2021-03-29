@@ -136,8 +136,16 @@ section {
   display: none;
 }
 
+.show {
+  display: block;
+}
+
 .nav-item {
   margin: 25px 0 0 40px;
+}
+
+.nav-item:last-child {
+  padding-bottom: 50px;
 }
 
 .nav-item-link {
@@ -189,6 +197,9 @@ section {
   }
   .nav-item {
     margin: 0 0 0 50px;
+  }
+  .nav-item:last-child {
+    padding-bottom: 0;
   }
 }
 

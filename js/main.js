@@ -15,11 +15,20 @@ window.addEventListener('scroll',(e)=>{
     let navMenu = document.querySelector('.nav-list');
 
     console.log(navMenu.style.display);
-    if (navMenu.style.display === 'none') {
-        navMenu.style.display = 'block';
-        console.log("first");
-    } else {
-        navMenu.style.display = 'none';
-        console.log("second");
-    }
+
+    navMenu.classList.toggle("show");
+
+    // if (navMenu.style.display === 'none' || navMenu.style.display == "") {
+    //     navMenu.style.display = 'block';
+    //     console.log("first");
+    // } else {
+    //     navMenu.style.display = 'none';
+    //     console.log("second");
+    // }
   }
+
+
+// carusel
+document.querySelector(".dots-container").addEventListener("click", e => {
+  console.log(e.target.children);
+})
