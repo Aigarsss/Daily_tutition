@@ -600,28 +600,37 @@ section {
   }
 }
 
+.carrusel-container {
+  overflow: hidden;
+  width: 300px;
+  margin: auto;
+}
+
 .carrusel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
-  height: 500px;
+  height: 420px;
+  width: 100%;
+  transition: transform 0.2s;
 }
 
 .carrusel-card {
   background-color: white;
-  width: 85%;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  margin: auto auto 3rem;
+  margin: auto auto 1rem;
   border-radius: 5px;
   color: $black;
   position: absolute;
 
+  // &:first-child {
+  //   transform: translate(600px);
+  // }
+
   img {
     border-radius: 5px;
-    width: 250px;
+    width: 150px;
     margin: 2rem auto;
   }
 }
@@ -644,6 +653,10 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .card-active {
+    background-color: $primary-color;
+  }
 }
 
 .dot {
@@ -652,10 +665,7 @@ section {
   height: 15px;
   margin: 20px 10px;
   border-radius: 50%;
-}
-
-.dot--active {
-  background-color: $primary-color;
+  cursor: pointer;
 }
 
 // what client say desktop
@@ -665,6 +675,12 @@ section {
     > p {
       width: 70%;
     }
+  }
+
+  .carrusel-container {
+    overflow: hidden;
+    width: 600px;
+    margin: auto;
   }
 
   .carrusel {
